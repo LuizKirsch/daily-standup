@@ -43,7 +43,7 @@ JIRA_API_TOKEN=seu-api-token
 ### 4. Executar
 
 ```bash
-python daily-standup.py
+python main.py
 ```
 
 ## Exemplo de saída
