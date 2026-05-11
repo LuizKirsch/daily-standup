@@ -29,7 +29,7 @@ copy .env.example .env
 Edite o `.env` com suas credenciais:
 
 ```env
-JIRA_URL=https://wject.atlassian.net
+JIRA_URL=sua-url-jira-aqui
 JIRA_EMAIL=seu-email@wject.com
 JIRA_API_TOKEN=seu-api-token
 ```
@@ -59,43 +59,21 @@ python daily-standup.py
 ────────────────────────────────────────────────────────────
   ERPK-42  Implementar validação de CPF no cadastro
     2026-05-09 14:23  Em Análise  →  Em Progresso
-    https://wject.atlassian.net/browse/ERPK-42
+    https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 💬  CARDS COMENTADOS
 ────────────────────────────────────────────────────────────
   ERPK-38  Corrigir cálculo de impostos na NF
     2026-05-09 11:05  "Validei com a equipe fiscal, pode seguir..."
-    https://wject.atlassian.net/browse/ERPK-38
+    https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 🚧  EM PROGRESSO — ATRIBUÍDOS A MIM
 ────────────────────────────────────────────────────────────
   ERPK-42  Implementar validação de CPF no cadastro
     Status: Em Progresso  | Prioridade: High
-    https://wject.atlassian.net/browse/ERPK-42
+    https://xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   Resumo: 1 movimentados · 1 comentados · 1 em progresso
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-```
-
-## Personalização
-
-| O que mudar | Onde |
-|---|---|
-| Projeto Jira | Variável `PROJECT_KEY` no topo do script |
-| Status "em progresso" | Lista no `jql_in_progress` dentro de `main()` |
-| Tamanho do preview de comentários | `[:120]` na função `get_my_comments_yesterday` |
-
-## Automatizar com agendador
-
-**Windows (Task Scheduler):**
-```
-Programa: python
-Argumentos: C:\Users\Wolf360\Desktop\automacao-jira\daily-standup.py
-Disparar: todo dia útil às 09:00
-```
-
-**Linux/macOS (cron):**
-```bash
-0 9 * * 1-5 cd /caminho/do/projeto && python daily-standup.py
 ```
